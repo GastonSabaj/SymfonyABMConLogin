@@ -1,0 +1,48 @@
+{{ form_start(form) }}
+    <div class="container-fluid">
+        <br>
+        <div class="row mb-3">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    {{ form_label(form.titulo) }}
+                    {{ form_widget(form.titulo, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.titulo) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.titulo)|striptags|trim }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    {{ form_label(form.descripcion) }}
+                    {{ form_widget(form.descripcion, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.descripcion) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.descripcion)|striptags|trim }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    {{ form_label(form.codigo) }}
+                    {{ form_widget(form.codigo, {'attr': {'class': 'form-control'}}) }}
+                    {% if form_errors(form.codigo) %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ form_errors(form.codigo)|striptags|trim }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+        <a class="btn btn-secondary" href="{{ path('app_producto_index') }}">Back to list</a>
+    </div>
+{{ form_end(form) }}

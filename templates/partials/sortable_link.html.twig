@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+
+{% if direction == 'asc' %}
+    <a href="{{ path(route, query|merge({(sortParameterName): field, (directionParameterName): 'desc'})) }}">{{ label }}</a>
+    <i class="fas fa-sort-up"></i>
+{% elseif direction == 'desc' %}
+    <a href="{{ path(route, query|merge({(sortParameterName): field, (directionParameterName): 'asc'})) }}">{{ label }}</a>
+    <i class="fas fa-sort-down"></i>
+{% else %}
+    <a href="{{ path(route, query|merge({(sortParameterName): field, (directionParameterName): 'asc'})) }}">{{ label }}</a>
+{% endif %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block navbar %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block body %}
+    <title>{% block title %}New product{% endblock %}</title>
+
+    <div class="container-fluid" style="margin-top:150px">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h1 class=" text-3xl font-bold"> <i class="fa fa-plus" aria-hidden="true"></i> Create new Product</h1>
+                {{ include('producto/_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html.twig' %}
+{% endblock %}
+

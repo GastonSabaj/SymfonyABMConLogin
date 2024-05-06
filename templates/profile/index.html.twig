@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block navbar %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block body %}
+    {# Quiero mostrar los campos del usuario  #}
+    <div style="margin-top:150px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h1 class="text-3xl font-bold"> <u><i class="fa fa-user" aria-hidden="true"></i> Datos del perfil </u> </h1>
+        <p style="margin-top: 1em;">Name: {{ user.name }}</p>
+        <p style="margin-top: 1em;">Age: {{ user.age }}</p>
+        <p style="margin-top: 1em;">Email: {{ user.email }}</p>
+        
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html.twig' %}
+{% endblock %}
+

@@ -1,0 +1,10 @@
+knp_paginator:
+    page_range: 5                     # Número de páginas que se muestran a la izquierda y a la derecha del número de página actual
+    template:
+        pagination: 'partials/pagination.html.twig'  # Plantilla Twig personalizada para la paginación
+        sortable: 'partials/sortable_link.html.twig' # Plantilla Twig personalizada para los enlaces de ordenación (si los utilizas)
+    default_options:
+        page_name: page                # Nombre del parámetro de consulta que indica el número de página
+        sort_field_name: sort          # Nombre del parámetro de consulta que indica el campo de ordenación
+        sort_direction_name: direction # Nombre del parámetro de consulta que indica la dirección de ordenación
+        distinct: true                 # Si se deben eliminar resultados duplicados en la paginación

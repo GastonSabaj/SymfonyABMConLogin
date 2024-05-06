@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Producto{% endblock %}
+
+{% block navbar %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block body %}
+    <div style="margin-top:100px">
+        <h1 class="text-3xl font-bold" >Producto</h1>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ product.id }}</td>
+                </tr>
+                <tr>
+                    <th>Titulo</th>
+                    <td>{{ product.titulo }}</td>
+                </tr>
+                <tr>
+                    <th>Descripcion</th>
+                    <td>{{ product.descripcion }}</td>
+                </tr>
+                <tr>
+                    <th>Codigo</th>
+                    <td>{{ product.codigo }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <a class="btn btn-secondary" href="{{ path('app_producto_index') }}">Back to list</a>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html.twig' %}
+{% endblock %}
